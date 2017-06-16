@@ -1,7 +1,7 @@
 PRAGMA temp_store_directory = '.';
 
 create temp table docs
-as select * from (setschema 'id, text' select jdictsplit(c1, 'id', 'text') from stdinput()) where text <>'' and text not null;
+as select * from (setschema 'id, text' select c1 as id, execprogram(null,'cat',c2) as text from dirfiles(.)) where text <>'' and text not null;
 
 create temp table results as select * from (select docid, id, confidence from 
 ( select docid, id, 
