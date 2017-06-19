@@ -10,8 +10,8 @@ Instructions
    * APSW. If you use Ubuntu, install the python-apsw package: sudo apt-get install python-apsw 
      Otherwise, download APSW from https://github.com/rogerbinns/apsw and install it following the instructions.
      If you are using MAC, you have to install APSW and readline via easy_install:
-           easy_install apsw
-           easy_install readline
+           *easy_install apsw
+           *easy_install readline
 
 2. Creating a metadata database:
 
